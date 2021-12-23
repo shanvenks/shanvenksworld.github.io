@@ -1,0 +1,16 @@
+.layer7 {
+    background-color: #0d1117;
+    z-index: 2;
+	background: transparent;
+}
+.layer7 welcome{
+	position:relative;
+	display:flex;
+	justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    filter: invert(1);
+    color: white;
+}
+text ali

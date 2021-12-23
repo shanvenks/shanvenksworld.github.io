@@ -1,0 +1,84 @@
+@mixin marquee-3d($color: black) {
+  display: flex;
+  align-items: center;
+
+  perspective: 500px;
+  font-size: 0;
+
+  .div {
+    display: inline-block;
+    height: 12rem;
+    width: 30rem;
+    position: relative;
+
+    font-size: 8rem;
+	  overflow: hidden;
+
+    .text {
+      position: absolute;
+    	width: 400%;
+    	line-height: 1.4;
+    }
+
+    &--1 {
+      background: $color;
+      transform-origin: top right;
+      transform: rotateY(-40deg);
+      color: #fff;
+
+      .text {
+        transform: translateX(60rem);
+      	animation: leftcrawl 14s linear infinite;
+      	text-shadow: 4px 0px 4px rgba(0,0,0,0.3);
+      }
+    }
+
+    &--2 {
+      background: lighten($color, 30%);
+      transform-origin: top left;
+      transform: rotateY(45deg);
+      color: #f8c9d9;
+
+      .text {
+        transform: translateX(30rem);
+	      animation: rightcrawl 14s linear infinite;
+      }
+    }
+  }
+}
+
+@keyframes leftcrawl {
+	to { transform: translateX(-100rem); }
+}
+
+@keyframes rightcrawl {
+	to { transform: translateX(-130rem); }
+}
+
+html {
+  body {
+    width: 100%;
+    width:320px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background: red;
+    
+    article {
+      //width:1300px;
+    }
+    
+    .marquee-3d {
+      @include marquee-3d;
+      transform: scale(.5);
+      min-width:1000px;
+      background: blue;
+      
+      h3 {
+        display: none;
+      }
+    }
+  }
+}

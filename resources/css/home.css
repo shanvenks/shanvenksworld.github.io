@@ -1,0 +1,489 @@
+.home {
+    background-color: #0d1117;
+    z-index: 2;
+	background: transparent;
+	
+	
+}
+
+.canvas_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--width);
+    margin-left: 150px;
+	margin-right:150px;
+    height: 120%;
+    overflow: hidden;
+    user-select: none;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+	
+
+.canvas_container canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.content-for-home {
+    position: relative;
+    width: 100%;
+	height: 100%;
+	min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.box {
+	position:center;
+	display: flex;
+	
+	
+	 justify-content: center;
+    align-items: center;
+    
+	
+}
+
+.box .inner {
+	width: 500px;
+	height: 50px;
+	line-height: 500px;
+	font-size: 4em;
+	font-family: sans-serif;
+	font-weight: bold;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.box .inner:first-child {
+	background-color: indianred;
+	color: darkred;
+	transform-origin: right;
+	transform: perspective(100px) rotateY(-15deg);
+}
+
+.box .inner:last-child {
+	background-color: lightcoral;
+	color: antiquewhite;
+	transform-origin: left;
+	transform: perspective(100px) rotateY(15deg);
+}
+
+.box .inner span {
+	position: relative;
+	
+	
+    width: 100%;
+	height: 100%;
+	min-height: 150vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+	  box-sizing: border-box;
+	animation: marquee 5s linear infinite;
+}
+
+.box .inner:first-child span {
+	animation-delay: 2.5s;
+	left: -100%;
+}
+
+@keyframes marquee {
+	from {
+		left: 100%;
+	}
+
+	to {
+		left: -100%;
+	}
+}
+
+
+
+
+
+
+.quote-container{
+  width:auto;
+  
+	   margin-left:auto;
+	  margin-right:auto;
+	  
+	position:relative;
+    max-width: 900px;
+    padding: 10px 10px;
+	padding: transparent;
+	background:transparent;
+    border-radius: 10px;
+    background-color:rgba(0 , 0 , 0, 0.4);
+    /*box-shadow: 0 2px 3px 4px rgba(255, 255, 255, 0.2);*/
+	
+    
+    justify-content: center;
+    
+    
+
+}
+
+.quote-text-tamil{
+    font-size: 2rem;
+}
+
+.long-quote{
+    font-size: 1rem;
+}
+
+.fa-affiliatetheme{
+    font-size: 2.75rem;
+    color:#e1eb34;
+}
+
+.quote-text-trn{
+    margin-top:15px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: italic;
+    color:rgba(255 , 255 , 255, 0.6)
+}
+
+.button-cont{
+    margin-top:15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+button{
+    cursor: pointer;
+    font-size: 1.2rem;
+    height:2.5rem;
+    border:none;
+    outline:none;
+    color:#333;
+    background:#fff;
+    border-radius:10px;
+    padding: 0.5rem 1.8rem;
+    box-shadow: 0 0.3rem rgba(143, 142, 142, 0.65);
+}
+
+button:hover{
+    filter: brightness(150%);
+}
+
+button:active{
+    transform: translate(0, 0.3rem);
+    box-shadow: 0 0.1rem rgba(255 , 255 , 255, 0.65);
+}
+
+.twitter-button:hover{
+    color:#38a1f3;
+}
+
+.next-kural:hover{
+    color: #dc143a;
+}
+
+.next-kural{
+    font-weight: 600;
+}
+
+.fa-twitter{
+    font-size: 1.5rem;
+}
+
+/* Loader styling */
+.loader {
+    border: 16px solid #333;
+    border-top: 16px solid #f3f3f3;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin{
+    0% { transform: rotate(0deg); }
+    100%{ transform: rotate(360deg); }
+}
+
+/* Media Queries */
+@media screen and (max-width:1000px) {
+    .quote-container{
+        margin: auto 10px;
+    }
+
+    .quote-text-tamil{
+        font-size: 2.25rem;
+    }
+
+    .fa-affiliatetheme{
+        font-size: 3rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.content-for-home .img-container {
+    width: 300px;
+    height: 300px;
+    background: url("../img/Venkatesh.png") no-repeat top left;
+    background-size: cover;
+	
+}
+
+.content-for-home .img-container img {
+    object-fit: cover;
+	object-fit: center;
+}
+
+
+.content-for-home .social-icons {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.content-for-home .social-icons .s-icon {
+    position: relative;
+    margin: 10px 25px;
+}
+
+.content-for-home .social-icons .s-icon a {
+    color: #606d79;
+    text-decoration: none;
+    transition: 0.1s;
+}
+
+.content-for-home .social-icons .s-icon a i {
+    font-size: 50px;
+}
+
+.content-for-home .social-icons .s-icon .s-name {
+    position: absolute;
+    font-size: 15px;
+    opacity: 0;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: 0.5s ease-out;
+}
+
+.content-for-home .social-icons .s-icon:hover .s-name {
+    opacity: 1;
+    bottom: -25px;
+}
+
+.content-for-home .social-icons .s-icon:hover a {
+ color:  #3b5998; 
+
+   
+   
+}
+
+.side-nav {
+    position: absolute;
+    right: 20px;
+    top: 30%;
+    transform: translateY(-50%);
+}
+
+.side-nav button {
+    position: relative;
+    display: block;
+    border: none;
+    color: #222222;
+    font-weight: bolder;
+    margin: 10px 0;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.side-nav button:hover .w {
+    font-size: 0px;
+}
+
+.side-nav button .w {
+    transition: 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    font-size: 30px;
+}
+
+.side-nav button .tooltip {
+    position: absolute;
+    font-size: 5em;
+    left: 100%;
+    top: 50%;
+    transform: translate(-100%, -50%);
+    width: 100vw;
+    opacity: 0;
+    color: #cccccc;
+    text-align: right;
+    visibility: hidden;
+    border-radius: 500px;
+    z-index: -1;
+    text-transform: capitalize;
+    transition: 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.side-nav button:hover .tooltip {
+    left: 0%;
+    visibility: visible;
+    opacity: 1;
+}
+
+.side-nav button::before,
+.side-nav button::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #384551;
+    z-index: -1;
+    transition: 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.side-nav button::before {
+    clip-path: polygon(50% 0, 100% 27%, 100% 73%, 50% 100%);
+}
+
+.side-nav button::after {
+    clip-path: polygon(0 27%, 50% 0, 50% 100%, 0 73%);
+}
+
+.side-nav button:hover::after {
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+}
+
+@media (max-width: 768px) {
+    .canvas_container {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 491px) {
+    .side-nav {
+        position: relative;
+        text-align: center;
+        top: inherit;
+        bottom: 0;
+        right: inherit;
+        margin-top: 100px;
+    }
+
+    .side-nav button {
+        display: inline-block;
+    }
+
+    .side-nav button::before,
+    .side-nav button::after {
+        transform: rotate(-90deg);
+    }
+
+    .side-nav button .tooltip {
+        display: none;
+    }
+}
+
+@media (max-width: 306px) {
+    .content-for-home .img-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .side-nav {
+        margin-top: 150px;
+    }
+}
+
+@media (max-width: 400px) {
+    .content-for-home .img-container {
+        width: 200px;
+        height: 200px;
+        background: url(../img/Venkatesh.png) no-repeat top left;
+        background-size: cover;
+    }
+}
